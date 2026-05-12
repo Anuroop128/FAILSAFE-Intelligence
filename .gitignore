@@ -1,0 +1,17 @@
+.venv
+
+
+
+data/processed/*
+!data/processed/.gitkeep
+
+
+frontend/src/*-backup.*
+
+
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore model features if you want them regenerated (optional)
+# models/model_features.pkl

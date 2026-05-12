@@ -1,0 +1,37 @@
+/* App.css — refined for the new dashboard design */
+
+@layer components {
+  /* Glowing primary button */
+  .btn-primary-glow {
+    box-shadow: var(--shadow-elegant);
+    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-primary-glow:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  /* Spin animation for loading states */
+  .spin {
+    animation: spin 1s linear infinite;
+    display: inline-block;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 
+  Targeted transitions instead of global * selector for performance.
+  We transition background and border colors smoothly.
+*/
+.theme-transition,
+.theme-transition *,
+.theme-transition *:before,
+.theme-transition *:after {
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, fill 0.4s ease, stroke 0.4s ease !important;
+  transition-delay: 0s !important;
+}
